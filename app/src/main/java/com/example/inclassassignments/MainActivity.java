@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = findViewById(R.id.buttonStart);
         Button stopButton = findViewById(R.id.buttonStop);
 
-        final Intent intent = new Intent(MainActivity.this, RingtonePlayer.class);
+        final Intent intent = new Intent(this, RingtonePlayer.class);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startService(intent);
+                startService(intent);
             }
         });
 

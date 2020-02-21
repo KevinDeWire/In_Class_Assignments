@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service
-            android:name=".RingtonePlayer"/>
+        <service android:name=".RingtonePlayer"/>
+        <service android:name=".RingtonePlayerService"/>
     </application>
 
 </manifest>
