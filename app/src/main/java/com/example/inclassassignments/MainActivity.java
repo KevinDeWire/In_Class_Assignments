@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = findViewById(R.id.buttonStart);
         Button stopButton = findViewById(R.id.buttonStop);
 
-        final Intent intent = new Intent(this, RingtonePlayer.class);
+        final Intent intent = new Intent(this, RingtonePlayerService.class);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
