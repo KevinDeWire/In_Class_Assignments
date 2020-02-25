@@ -32,6 +32,7 @@ public class RingtonePlayerService extends Service {
 
     @Override
     public void onDestroy(){
+        super.onDestroy();
         mediaPlayer.stop();
         Toast.makeText(this, "service stopping", Toast.LENGTH_SHORT).show();
     }

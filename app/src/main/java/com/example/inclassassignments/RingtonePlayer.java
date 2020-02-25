@@ -27,6 +27,7 @@ public class RingtonePlayer extends IntentService {
 
     @Override
     public void onDestroy(){
+        super.onDestroy();
         player.stop();
         Toast.makeText(this, "service stopping", Toast.LENGTH_SHORT).show();
     }
