@@ -14,11 +14,11 @@ public class RingtonePlayer extends IntentService {
         super("RingtonePlayer");
     }
 
-   // MediaPlayer player;
+    MediaPlayer player = new MediaPlayer();
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        MediaPlayer player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
+        player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
         player.setLooping(true);
         player.start();
         Toast.makeText(this, "service starting", Toast.LENGTH_SHORT).show();
@@ -27,7 +27,7 @@ public class RingtonePlayer extends IntentService {
 
     @Override
     public void onDestroy(){
-     //   player.stop();
+        player.stop();
         Toast.makeText(this, "service stopping", Toast.LENGTH_SHORT).show();
     }
 }
